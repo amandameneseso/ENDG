@@ -10,7 +10,7 @@ body {
 }
 
 .principal {
-  width: 80%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -47,12 +47,6 @@ body {
   right: 14%;
   width: 160px;
 }
-.img3 {
-  top: 149%;
-  right:46%;
-  width: 120px;
-}
-/* Adicione mais classes .imgN para mais imagens e suas posições */
 
 /* Estilo base para frases espalhadas */
 .scattered-phrase {
@@ -105,7 +99,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px; /* Espaço entre os botões */
-  margin-bottom: 30px; /* Espaço abaixo dos botões */
+  margin-bottom: -200px; /* Espaço abaixo dos botões */
   flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas menores */
   position: relative; /* Para garantir que fiquem acima das decorações se usar z-index */
   z-index: 2;
@@ -151,20 +145,30 @@ body {
 }
 
 #socialimg1 {
-  position: absolute;
-  top: 39%; /* Posição no fundo */
-  left: 54%; /* Posição na esquerda */
+  position: relative;
+  bottom: 220px; /* Posição no fundo */
+  left: 100px; /* Posição na esquerda */
   width: 35px; /* Tamanho */
   height: auto;
   pointer-events: none;
 }
 #socialimg2 {
-  position: absolute;
-  top: 71%; /* Posição no fundo */
-  left: 45%; /* Posição na esquerda */
+  position: relative;
+  top: -188px; /* Posição no fundo */
+  left: -52px; /* Posição na esquerda */
   width: 75px; /* Tamanho */
   height: auto;
   pointer-events: none;
+}
+#socialimg3 {
+  position: relative;
+  bottom: 580px; /* sobe um pouco acima da section */
+  left: 10px;
+  /* transform: translateX(-50%); */
+  width: 132px;
+  height: auto;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Estilo base para imagens perto dos botões sociais */
@@ -177,7 +181,7 @@ body {
 
 .deco1 {
   width: 170px;
-  top: -70%;
+  top: -40%;
   left: 15%;
   transform: rotate(-8deg);
 }
@@ -197,87 +201,24 @@ body {
 .stayHydrated {
   width: 130px;
   height: auto;
-  margin: 50px 50px 0px 50px;
+  margin: 50px;
   position: relative;
-}
-
-.clickHere {
-  width: 150px;
-  height: auto;
-  position: relative;
-  left: 90%;
-  margin-bottom: 30px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-}
-
-.modal-content {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  margin: 110px auto;
-  text-align: center;
-  z-index: 100;
-  background-color: #1d1d1d;
-  color: #e6e6e6;
-  padding: 30px;
-  border: 2px solid #40555f;
-  font-family: "VT323", monospace;
-  font-size: 1.3em;
 }
 
 @media (max-width: 768px) {
-  .top-container {
-    height: 60vh; /* Reduz a altura do contêiner superior em telas menores */
+  .deco1 {
+    display: none;
   }
 
-  .scattered-image {
-    width: 80px; /* Reduz o tamanho das imagens espalhadas */
+  .deco2 {
+    display: none;
   }
 
-  .scattered-phrase {
-    font-size: 1.2em; /* Reduz o tamanho da fonte das frases */
+  .deco3 {
+    display: none;
   }
-
-  .phrase1 {
-    font-size: 1.8em;
-  } /* Ajusta a frase central */
 
   .text-section {
-    width: 95%; /* Aumenta a largura do texto em telas menores */
-    padding: 15px;
-  }
-
-  .social-buttons {
-    flex-direction: column; /* Empilha os botões em telas menores */
-    align-items: center; /* Centraliza os botões empilhados */
-    gap: 10px; /* Reduz o espaço entre botões empilhados */
-  }
-
-  .social-button {
-    width: 200px; /* Largura fixa para botões empilhados */
-    justify-content: center; /* Centraliza texto e ícone no botão */
-  }
-
-  .social-deco {
-    width: 50px; /* Reduz o tamanho das decorações sociais */
-  }
-
-  .deco1 {
-    top: 5%;
-    left: 5%;
-  }
-  .deco2 {
-    bottom: 5%;
-    right: 5%;
+    width: 80%;
   }
 }
