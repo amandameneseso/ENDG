@@ -10,14 +10,19 @@ body {
 }
 
 .principal {
-  max-width: 80%;
+  max-width: 50%;
   height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 /* Estilo do contêiner superior */
 .top-container {
   width: 100%;
-  height: 90vh; /* Ocupa 90% da altura da janela visível */
+  height: 60vh; /* Ocupa 90% da altura da janela visível */
   position: relative; /* Essencial para posicionar os filhos (imagens/frases) absolutamente */
   display: flex; /* Usa flexbox para centralizar/ajustar o conteúdo se necessário, embora pos abs seja principal */
   justify-content: center; /* Centraliza horizontalmente (se pos abs não for usada em todos) */
@@ -37,15 +42,15 @@ body {
 
 /* Posições específicas para cada imagem espalhada */
 .img1 {
-  top: 70%;
-  left: 6.8%;
-  width: 120px;
-  z-index: -1;
+  top: 91.4%;
+  left: 32%;
+  width: 110px;
+  z-index: -100;
 }
 .img2 {
-  bottom: 6%;
-  right: 14%;
-  width: 160px;
+  top: 50%;
+  right: 12%;
+  width: 140px;
 }
 
 /* Estilo base para frases espalhadas */
@@ -206,18 +211,28 @@ body {
 }
 
 @media (max-width: 768px) {
+  .top-container {
+    height: 15vh;
+  }
+  .phrase1 {
+    font-size: 3.2em;
+    top: 145px;
+  }
+  .img1 {
+    display: none;
+  }
+  .img2 {
+    display: none;
+  }
   .deco1 {
     display: none;
   }
-
   .deco2 {
     display: none;
   }
-
   .deco3 {
     display: none;
   }
-
   .text-section {
     width: 80%;
   }
