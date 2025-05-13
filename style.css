@@ -1,5 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+@font-face {
+  font-family: "Trajan Pro";
+  src: url("font/TrajanPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  display: swap;
+}
+@font-face {
+  font-family: "Trajan Pro";
+  src: url("font/TrajanPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  display: swap;
+}
 
 body {
   margin: 0; /* Remove margem padrão do body */
@@ -28,7 +42,8 @@ body {
   justify-content: center; /* Centraliza horizontalmente (se pos abs não for usada em todos) */
   align-items: center; /* Centraliza verticalmente (se pos abs não for usada em todos) */
   text-align: center; /* Centraliza texto dentro do contêiner */
-  font-family: "VT323", monospace;
+  font-family: "Trajan Pro", serif;
+  font-weight: 700;
   padding-bottom: 60px;
 }
 
@@ -68,7 +83,7 @@ body {
   top: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5.5em;
+  font-size: 5em;
   color: #e6e6e6;
 }
 
@@ -78,8 +93,9 @@ body {
   max-width: 400px; /* Largura máxima para telas grandes */
   margin: 40px auto; /* Centraliza o bloco e adiciona espaço acima/abaixo */
   padding: 20px; /* Espaçamento interno */
-  font-family: "VT323", monospace;
-  font-size: 1.4em;
+  font-family: "Eczar", serif;
+  font-weight: 400; /* Usa a versão Regular (peso 400) */
+  font-size: 1.3em;
   line-height: 1.6;
   text-align: center;
   color: #e6e6e6;
@@ -122,7 +138,7 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
-  font-family: "Outfit", sans-serif;
+  font-family: "Eczar", serif;
 }
 
 .social-button span {
